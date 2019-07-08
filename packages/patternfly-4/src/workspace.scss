@@ -13,6 +13,14 @@ $pf-global--font-path: "./assets/webfonts" !default;
 
 #___gatsby {
   height: 100%;
+
+  > div {
+    height: 100%;
+
+    > div {
+      height: 100%;
+    }
+  }
 }
 
 $block: '.pf4';
