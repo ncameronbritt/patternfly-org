@@ -16,18 +16,29 @@ export const CoreContext = React.createContext({});
 export default class Documentation extends React.Component {
   constructor(props) {
     super(props);
+    this.state = { isFull: false };
+  }
+
+  componentDidMount() {
+    // need to check if full after initial render, as the statically built site
+    // (and the page that is presented on first load) is not full-screen otherwise
+    if (this.state.isFull !== window.location.search.length > 0) {
+      // eslint-disable-next-line react/no-did-mount-set-state
+      this.setState({
+        isFull: window.location.search.length > 0
+      });
+    }
   }
 
   render() {
     const { children, className = '', docs = '', heading = '', variablesRoot, data } = this.props;
+    const { isFull } = this.state;
 
     return (
       <Location>
         {({ location }) => {
-          let isFull = false;
           let matchingChild = children;
-          if (location.search.length) {
-            isFull = true;
+          if (isFull) {
             // requesting full screen view of an example
             const queryObject = Example.parseQueryString(location.search.substr(1));
             matchingChild = React.Children.toArray(children).filter((child, i) => {

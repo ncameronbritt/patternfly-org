@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import exampleStyles from '!raw!../../_repos/example-styles.css';
 import { Location } from '@reach/router';
 import queryString from 'query-string';
-// import Helmet from 'react-helmet';
+import Helmet from 'react-helmet';
 
 const styles = `
   .ws-example { 
@@ -58,18 +58,18 @@ const ShadowDomPreview = ({ children, className, isReact, isFull, html, ...props
           }
           return (
             <>
-              {/* {isFull && (
+              {isFull && (
                 <Helmet>
                   <title>Full Page Example</title>
                 </Helmet>
-              )} */}
+              )}
               <root.div className="shadow-dom-outer">
                 <style>{noRootStyles}</style>
                 {isReact && !isFull && <style>{styles}</style>}
                 {html ? (
-                  <div dangerouslySetInnerHTML={{ __html: html }} className={className} style={isFull ? { height: '100%' } : undefined} {...props} />
+                  <div dangerouslySetInnerHTML={{ __html: html }} className={className} style={isFull ? { height: '100vh' } : undefined} {...props} />
                 ) : (
-                  <div className={children ? `ws-example ${className}` : className} style={isFull ? { height: '100%' } : undefined} {...props}>
+                  <div className={children ? `ws-example ${className}` : className} style={isFull ? { height: '100vh' } : undefined} {...props}>
                     {children}
                   </div>
                 )}

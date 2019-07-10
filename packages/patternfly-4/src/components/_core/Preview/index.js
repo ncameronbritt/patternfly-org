@@ -3,6 +3,7 @@ import LinkPreview from '../../LinkPreview';
 import ShadowDomPreview from '../../ShadowDomPreview';
 import { CoreContext } from '../Documentation';
 import { Location } from '@reach/router';
+import classnames from 'classnames';
 import './styles.scss';
 
 export default class Preview extends React.Component {
@@ -32,7 +33,7 @@ export default class Preview extends React.Component {
             return (
               <CoreContext.Consumer>
                 {({ coreClass }) => (
-                  <ShadowDomPreview className={`${background} ${coreClass} ${className}`} isFull html={children} />
+                  <ShadowDomPreview className={classnames(background, coreClass, className, 'ws-example')} isFull html={children} />
                 )}
               </CoreContext.Consumer>
             );
@@ -51,7 +52,7 @@ export default class Preview extends React.Component {
           } else {
             return (
               <div className={`Preview ${viewport}`}>
-                <LinkPreview name={heading} path={fullPath} />;
+                <LinkPreview name={heading} path={fullPath} />
               </div>
             )
           }
