@@ -31,7 +31,7 @@ Use a data list when the information you want to display is not easily structure
 The data list is not recommended for displaying content that is better presented in tabular format with well defined columns and headings. Instead, use a table.
 
 #### Alternative solutions
-Alternative to a data list include [tables](#tables) or card views. Card views and data lists have similar properties, but information in a card view is chunked into a grid of individual cards. In choosing between a data list and a card view, consider the type of data that will be displayed and the format that best suits that data. If you cannot easily fit all of the data that needs to be displayed into a card, a data list might be a better solution.
+As an alternative to a data list, consider using [tables](#tables) or card views. Card views and data lists have similar properties, but information in a card view is chunked into a grid of individual cards. In choosing between a data list and a card view, consider the type of data that will be displayed and the format that best suits that data. If you cannot easily fit all of the data that needs to be displayed into a card, a data list might be a better solution.
 
 #### How to use
 Think of each row in a data list as a container for some formatted content. In PatternFly 4, data list rows can accept any [layout](/documentation/react/layouts/bullseye) supported by the design system as long as all rows apply the same layout. Here are some common layouts that may be useful in a data list:
