@@ -9,7 +9,7 @@ Use [data lists](#data-lists) when:
 * You want to include active content like a chart
 * Content displayed may vary between rows
 
-Use a [tables](#tables) when:
+Use [tables](#tables) when:
 * Users will want to consume data as a grid (i.e. structured rows and columns)
 * You want column headers
 
@@ -107,7 +107,7 @@ Use a compact table when you want to show as much data per page as possible and 
 2. **Expansion panel:** Contains details associated with a row
 
 #### When to use
-Use when you have more information than will comfortably fit inside a row or you want to provide a way for advanced users to access information that is not applicable to all users.
+Use the expandable table when you have more information than will comfortably fit inside a row, or when you want to provide a way for advanced users to access information which may not applicable to all users.
 
 ### Compound-expandable table
 

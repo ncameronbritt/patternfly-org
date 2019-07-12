@@ -52,7 +52,7 @@ Custom toolbars can vary by use case. In the above example, the toolbar is prima
 
 ## Examples
 **Toolbar in data table**
-![datatable](./img/data-table-example.png)
+![table](./img/data-table-example.png)
 
 **Toolbar in data list**
 ![datalist](./img/data-list-example.png)
